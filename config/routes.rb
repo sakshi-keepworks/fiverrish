@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :orders, only: [:create]
   end
 
-  resources :orders, only: [:show]
+  resources :orders, only: [:show, :create]
 
   get '/user_orders' => 'orders#user_orders'
 
