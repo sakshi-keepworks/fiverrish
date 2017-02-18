@@ -15,6 +15,10 @@ class OrdersController < ApplicationController
     redirect_to user_orders_path
   end
 
+  def order
+    @services = Service.where.not(user: current_user)
+  end
+
   def user_orders
     @orders = current_user.orders
   end

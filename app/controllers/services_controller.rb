@@ -22,6 +22,10 @@ class ServicesController < ApplicationController
     end
   end
 
+  def order
+    @services = Service.where.not(user: current_user)
+  end
+
   def edit
   end
 

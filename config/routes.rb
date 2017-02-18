@@ -8,7 +8,11 @@ Rails.application.routes.draw do
     resources :orders, only: [:create]
   end
 
-  resources :orders, only: [:show, :create]
+  resources :orders, only: [:show, :create] do
+    collection do
+      get :order
+    end
+  end
 
   get '/user_orders' => 'orders#user_orders'
 
