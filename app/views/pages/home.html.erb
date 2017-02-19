@@ -31,12 +31,12 @@
     <% @services.each do |service| %>
       <div class="col-md-3">
         <div class="gig-card">
-          <%= image_tag service.image.url %>
+          <%= image_tag service.image.url, :class => "gig-img" %>
           <h4>
             <%= service.title %>
           </h4>
           <h3>
-            <%= service.price %>
+            Rs. <%= service.price %>
           </h3>
         </div>
       </div>

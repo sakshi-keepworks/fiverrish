@@ -56,6 +56,9 @@ end
 group :production do
   # Postgres for production
   gem 'pg'
+  gem 'rails_12factor'
   # ImageMagick
   gem 'rmagick'
 end
+
+ruby "2.3.0"
